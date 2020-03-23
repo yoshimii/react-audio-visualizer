@@ -11,6 +11,10 @@ class App extends Component {
 		this.createVisualization = this.createVisualization.bind(this)
 	}
 
+	componentDidMount() {
+		this.createVisualization()
+	}
+
 	createVisualization() {
 		let context = new AudioContext();
 		let analyser = context.createAnalyser();
@@ -85,14 +89,10 @@ class App extends Component {
 				let bar_x = i * 3;
 				let bar_width = 2;
 				let bar_height = -(((freqData[i]) / 10) + fishData[i]);
-				ctx.fillRect(bar_x, canvas.height - 50, bar_width, bar_height)
+				ctx.fillRect(bar_x, canvas.height - 150, bar_width, bar_height)
 			}
 		};
 		renderFrame()
-	}
-
-	onAudioClick() {
-		this.createVisualization()
 	}
 
 	render() {
@@ -108,7 +108,7 @@ class App extends Component {
 						ref="audio"
 						controls={true}
 						src={AutomaticStop}
-						onClick={this.onAudioClick}
+						onClick={this.createVisualization}
 						/>
 						<h2>
 							Automatic Stop - The Strokes
