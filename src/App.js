@@ -11,10 +11,6 @@ class App extends Component {
 		this.createVisualization = this.createVisualization.bind(this)
 	}
 
-	componentDidMount() {
-		this.createVisualization()
-	}
-
 	createVisualization() {
 		let context = new AudioContext();
 		let analyser = context.createAnalyser();
