@@ -95,6 +95,10 @@ class App extends Component {
 		renderFrame()
 	}
 
+	onAudioClick() {
+		this.createVisualization()
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -108,6 +112,7 @@ class App extends Component {
 						ref="audio"
 						controls={true}
 						src={AutomaticStop}
+						onClick={this.onAudioClick}
 						/>
 						<h2>
 							Automatic Stop - The Strokes
