@@ -89,7 +89,7 @@ class App extends Component {
 				let bar_x = i * 3;
 				let bar_width = 2;
 				let bar_height = -(((freqData[i]) / 10) + fishData[i]);
-				ctx.fillRect(bar_x, canvas.height - 150, bar_width, bar_height)
+				ctx.fillRect(bar_x, canvas.height - 50, bar_width, bar_height)
 			}
 		};
 		renderFrame()
