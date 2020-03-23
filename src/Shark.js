@@ -10,5 +10,5 @@ for (let i = 10; i < 40; i++) {
 for (let i = 50; i >= 7; i--) {
     Shark.push(Math.sqrt(i)*4 + 15)
 }
-console.log(Shark)
+
 export default Shark;
